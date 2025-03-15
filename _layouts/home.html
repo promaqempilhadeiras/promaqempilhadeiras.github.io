@@ -1,0 +1,519 @@
+---
+layout: splash
+title: 'Página Inicial'
+---
+
+{{ content }}
+<!-- Script para fechar o menu ao clicar em uma opção -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var menuToggle = document.querySelector('.greedy-nav__toggle') // Botão do menu
+    var navLinks = document.querySelectorAll('.visible-links a') // Links do menu
+
+    // Para cada link do menu, adicionamos um listener de clique
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        // Verifica se o menu está aberto
+        if (menuToggle && menuToggle.classList.contains('hidden') === false) {
+          menuToggle.click() // Fecha o menu ao clicar no link
+        }
+      })
+    })
+  })
+</script>
+
+<div class="initial-content">
+  <div
+    class="page__hero--overlay"
+    style="
+      background-color: #000;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/assets/icones/emp.avif');
+    "
+  >
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        Promaq Empilhadeiras
+      </h1>
+
+      <p class="page__lead">
+        Bem-vindo à PROMAQ – Especialistas em Empilhadeiras Na PROMAQ,
+        oferecemos soluções completas para garantir o máximo desempenho e
+        segurança da sua operação. Somos uma empresa especializada em manutenção
+        preventiva e corretiva, reformas e aluguel de empilhadeiras, sempre com
+        um atendimento ágil e eficiente. Nossa missão é manter sua frota em
+        perfeito funcionamento, evitando paradas inesperadas e otimizando sua
+        produtividade. Conte com a PROMAQ para um serviço de qualidade e
+        confiança. Entre em contato e descubra como podemos ajudar a sua empresa
+        a ir mais longe!
+      </p>
+
+      <!-- Botão Call to Action com WhatsApp -->
+      <p>
+        <a
+          href="https://wa.me/5551991243765?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
+          class="btn btn--whatsapp btn--large"
+          target="_blank"
+        >
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+
+      <!-- Botão Call to Action para Instagram -->
+      <p>
+        <a
+          href="https://www.instagram.com/promaq_empilhadeiras"
+          class="btn btn--instagram btn--large"
+          target="_blank"
+        >
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </p>
+    </div>
+  </div>
+  <style>
+    /* Estilo padrão do botão */
+    .btn--whatsapp {
+      background-color: #075e54; /* Verde WhatsApp */
+      color: white; /* Texto branco */
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Transição suave para o hover */
+    }
+
+    /* Estilo hover */
+    .btn--whatsapp:hover {
+      background-color: #20b358; /* Um tom mais escuro de verde ao passar o mouse */
+    }
+
+    /* Estilo padrão do botão */
+    .btn--instagram {
+      background-color: #833ab4; /* Cor do Instagram */
+      color: white; /* Texto branco */
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Transição suave para o hover */
+    }
+
+    /* Estilo hover */
+    .btn--instagram:hover {
+      background-color: #c13584; /* Um tom mais escuro de rosa ao passar o mouse */
+    }
+  </style>
+
+  <div id="main" role="main">
+    <article
+      class="splash"
+      itemscope
+      itemtype="https://schema.org/CreativeWork"
+    >
+      <meta itemprop="headline" content="Splash Page" />
+      <meta
+        itemprop="description"
+        content="Especializada na fabricação e instalação de toldos e calhas, a Toldos
+        São José oferece soluções de alta qualidade para proteção de fachadas,
+        áreas externas e comerciais. Atendendo a pequenas empresas e
+        residências, nossa empresa familiar garante durabilidade, eficiência e
+        personalização em cada projeto, sempre com o compromisso de proporcionar
+        conforto e segurança em qualquer ambiente. Confie na expertise da Toldos
+        São José para cobrir suas necessidades com estilo e funcionalidade."
+      />
+      <meta itemprop="datePublished" content="2016-03-23T12:48:41-03:00" />
+
+      <section class="page__content" itemprop="text">
+        <!-- Seção de produtos com título e linha separadora -->
+        <div id="servicos" class="custom-product-section">
+          <h2 style="text-align: center; font-size: 2em; margin-bottom: 0.5em">
+            Nossos Serviços
+          </h2>
+
+          <div
+            class="custom-product-wrapper"
+            style="
+              display: flex !important;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              gap: 2%;
+            "
+          >
+            <!-- Produto 1: Toldos -->
+            <div
+              class="custom-product-item"
+              style="flex: 1 1 48% !important; margin-bottom: 2em"
+            >
+              <img
+                src="/assets/icones/mnt.jpg"
+                alt="Imagem"
+                style="width: 100% !important; height: 200px; object-fit: cover"
+              />
+              <h2 style="margin-top: 0.5em">Manutenção de Empilhadeiras</h2>
+              <ul>
+                <li>
+                  Na PROMAQ, oferecemos serviços especializados para manter sua
+                  frota sempre operando com segurança e eficiência. Trabalhamos
+                  com todos os tipos de empilhadeiras: a combustão, GLP e
+                  elétricas.Com equipe especializada e peças de qualidade,
+                  garantimos um serviço eficiente e seguro.
+                </li>
+
+                <li>
+                  Manutenção Preventiva – Inspeções regulares para evitar falhas
+                  e prolongar a vida útil do equipamento.
+                </li>
+
+                <li>
+                  Manutenção Corretiva – Diagnóstico preciso e reparo ágil para
+                  minimizar o tempo de parada.
+                </li>
+
+                <li>
+                  Reformas e Recuperação – Restauração completa para devolver o
+                  desempenho e a confiabilidade da sua empilhadeira.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Produto 2: Calhas -->
+            <div
+              class="custom-product-item"
+              style="flex: 1 1 48% !important; margin-bottom: 2em"
+            >
+              <img
+                src="/assets/icones/manut.jpg"
+                alt="Imagem"
+                style="width: 100% !important; height: 200px; object-fit: cover"
+              />
+              <h2 style="margin-top: 0.5em">
+                Equipamentos Elétricos e Paleteiras
+              </h2>
+              <ul>
+                <li>
+                  Além das empilhadeiras, também realizamos manutenção de outros
+                  equipamentos essenciais para a sua operação.Conte com a PROMAQ
+                  para manter seus equipamentos sempre prontos para o trabalho,
+                  reduzindo custos e aumentando a produtividade.
+                </li>
+                <li>
+                  Paleteiras Elétricas e Manuais – Inspeção, troca de peças e
+                  reparos para garantir o máximo desempenho.
+                </li>
+                <li>
+                  Equipamentos Elétricos Industriais – Diagnóstico e manutenção
+                  de componentes elétricos para evitar falhas e melhorar a
+                  eficiência.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          /* Responsividade para dispositivos móveis */
+          @media (max-width: 768px) {
+            .custom-product-wrapper {
+              flex-direction: column;
+              gap: 1.5em;
+            }
+
+            .custom-product-item {
+              flex: 1 1 100%;
+            }
+          }
+        </style>
+        <!-- produtos -->
+
+        <!-- Seção Projetos -->
+        <div id="dicas" class="custom-projects-section">
+          <h2 style="text-align: center; font-size: 2em; margin-bottom: 0.5em">
+            Dicas úteis
+          </h2>
+
+          <div class="gallery" style="display: flex; flex-wrap: wrap; gap: 2em">
+            {% for project in site.data.projects %}
+
+            <div class="gallery-item" style="flex: 1 1 30%; margin-bottom: 2em">
+              <img
+                src="{{ project.image }}"
+                alt="{{ project.title }}"
+                style="
+                  width: 100%;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 8px;
+                "
+              />
+              <p>{{ project.excerpt }}</p>
+            </div>
+
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Script para limitar o número de projetos em telas pequenas -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const projects = document.querySelectorAll('.gallery-item')
+
+            if (window.innerWidth <= 768) {
+              projects.forEach((project, index) => {
+                if (index >= 5) {
+                  project.classList.add('hidden-on-mobile')
+                }
+              })
+            }
+          })
+        </script>
+
+        <style>
+          /* Galeria de projetos */
+          .gallery {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .gallery-item {
+            flex: 1 1 30%;
+            margin: 0 !important;
+          }
+
+          /* Responsividade para telas pequenas */
+          @media (max-width: 768px) {
+            .gallery-item {
+              flex: 1 1 100% !important; /* Uma imagem por linha em telas pequenas */
+            }
+          }
+
+          .hidden-on-mobile {
+            display: none !important;
+          }
+        </style>
+
+        <!-- Projetos -->
+        <!-- 
+         <div id="projetos" class="custom-projects-section">
+          <h2 style="text-align: center; font-size: 2em; margin-bottom: 0.5em">
+            Projetos
+          </h2>
+        
+          <div class="gallery" style="display: flex; flex-wrap: wrap; gap: 2em">
+            {% for post in paginator.posts %}
+            <div class="gallery-item" style="flex: 1 1 30%; margin-bottom: 2em">
+              <img
+                src="{{ post.image }}"
+                alt="{{ post.title }}"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"
+              />
+              <p>{{ post.excerpt }}</p>
+            </div>
+            {% endfor %}
+          </div>
+      
+          <div class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}">Página Anterior</a>
+            {% endif %}
+        
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">Próxima Página</a>
+            {% endif %}
+          </div>
+        </div>
+        -->
+
+        <!-- Informacoes -->
+        <h2 style="text-align: center; font-size: 2em; margin-bottom: 0.5em">
+          Informações
+        </h2>
+
+        <div
+          id="informacoes"
+          class="contact-section"
+          style="background-color: #202020; padding: 2em 0"
+        >
+          <div
+            class="container"
+            style="
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              text-align: center;
+              max-width: 1200px;
+              margin: 0 auto;
+            "
+          >
+            <!-- Coluna 1: Contato -->
+            <div
+              class="contact-item"
+              style="
+                flex: 1 1 30%;
+                margin-bottom: 1.5em;
+                padding-right: 1em;
+                border-right: 2px solid #ccc;
+              "
+            >
+              <img
+                src="/assets/icones/contato.png"
+                alt="Contato"
+                style="width: 50px; height: 50px; margin-bottom: 1em"
+              />
+              <h3 style="font-size: 1.5em; margin-bottom: 0.5em">Contato</h3>
+              <p>
+                Fone:
+                <a href="tel:+5551991243765" id="phone-link"
+                  >(51) 99124-3765
+                </a>
+              </p>
+              <p>
+                Instagram:
+                <a
+                  href="https://www.instagram.com/promaq_empilhadeiras"
+                  id="instagram"
+                  target="_blank"
+                  >@promaq_2024</a
+                >
+              </p>
+              <p>
+                Email:
+                <a href="mailto:promaqoficial@gmail.com"
+                  >promaqoficial@gmail.com</a
+                >
+              </p>
+            </div>
+
+            <!-- Script para condicionar o comportamento do link de telefone -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var phoneLink = document.getElementById('phone-link')
+                var instagram = document.getElementById('instagram ')
+                var isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent
+                )
+
+                if (!isMobile) {
+                  // Se não for dispositivo móvel, abre o WhatsApp
+                  phoneLink.href =
+                    'https://wa.me/5551991243765?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços.'
+                  phoneLink.target = '_blank' // Abre o WhatsApp em uma nova aba
+
+                  instagram.href =
+                    'https://www.instagram.com/promaq_empilhadeiras'
+                  instagram.target = '_blank' // Abre o WhatsApp em uma nova aba
+                } else {
+                  // Se for dispositivo móvel, adiciona à agenda
+                  phoneLink.href = 'tel:+5551991243765' // Ação padrão de telefone em celulares
+
+                  // Se for dispositivo móvel, adiciona à agenda
+                  instagram.href =
+                    'https://www.instagram.com/promaq_empilhadeiras' // Ação padrão de telefone em celulares
+                }
+              })
+            </script>
+
+            <!-- Coluna 2: Endereço -->
+            <div
+              class="contact-item"
+              style="
+                flex: 1 1 30%;
+                margin-bottom: 1.5em;
+                padding-right: 1em;
+                border-right: 2px solid #ccc;
+              "
+            >
+              <img
+                src="/assets/icones/endereco(1).png"
+                alt="Endereço"
+                style="width: 50px; height: 50px; margin-bottom: 1em"
+              />
+              <h3 style="font-size: 1.5em; margin-bottom: 0.5em">Endereço</h3>
+              <p>Sapucaia-RS</p>
+              <p>Atendemos em todo Estado</p>
+            </div>
+
+            <!-- Coluna 3: Horário de Funcionamento -->
+            <div
+              class="contact-item"
+              style="flex: 1 1 30%; margin-bottom: 1.5em"
+            >
+              <img
+                src="/assets/icones/calendario.png"
+                alt="Horário de Funcionamento"
+                style="width: 50px; height: 50px; margin-bottom: 1em"
+              />
+              <h3 style="font-size: 1.5em; margin-bottom: 0.5em">
+                Horário de Funcionamento
+              </h3>
+              <p>Seg - Sex: 08h às 18h</p>
+              <p>Sáb: 08h às 13h</p>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          /* Aumentar o tamanho dos ícones e garantir que não seja sobrescrito */
+          .contact-item img {
+            width: 80px !important; /* Forçar o tamanho dos ícones */
+            height: 80px !important; /* Forçar o tamanho dos ícones */
+            margin-bottom: 0.5em; /* Ajustar o espaçamento entre o ícone e o texto */
+          }
+
+          /* Remover o padding-top do h3 para aproximar o texto da imagem */
+          .contact-item h3 {
+            padding-top: 0 !important; /* Remover padding */
+            margin-top: 0.5em; /* Opcional: adicionar uma margem pequena */
+          }
+          /* Responsividade para dispositivos móveis */
+          @media (max-width: 768px) {
+            .container {
+              flex-direction: column;
+            }
+
+            .contact-item {
+              flex: 1 1 100%;
+              border-right: none !important;
+              padding-right: 0 !important;
+              border-bottom: 2px solid #ccc !important; /* Adiciona a linha de separação */
+              width: 80%; /* Define a largura da linha */
+              margin-left: auto; /* Centraliza a linha */
+              margin-right: auto; /* Centraliza a linha */
+            }
+
+            /* Remove a linha de separação do último item */
+            .contact-item:last-child {
+              border-bottom: none !important;
+            }
+
+            .contact-item img {
+              width: 60px !important;
+              height: 60px !important;
+            }
+          }
+        </style>
+        <!-- Informacoes -->
+      </section>
+    </article>
+  </div>
+</div>
+
+<style>
+  /* Ajuste do espaçamento superior do h2 */
+  h2 {
+    padding-top: 0.5em; /* Ajuste o valor conforme necessário */
+    margin-top: 0.5em; /* Também pode ajustar a margem para mais controle */
+  }
+
+  /* Se você quiser limitar essa alteração a seções específicas */
+  .custom-product-section h2,
+  .custom-projects-section h2,
+  .contact-section h2 {
+    padding-top: 0.5em; /* Reduzir o padding superior */
+    margin-top: 0.5em; /* Ajuste a margem superior se necessário */
+  }
+</style>
