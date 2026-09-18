@@ -1,0 +1,43 @@
+name: Build Jekyll para Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v6
+
+      - name: Configurar Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Gerar o site
+        run: bundle exec jekyll build --destination ./_site
+
+      - name: Publicar arquivos gerados
+        run: |
+          mkdir ../site-final
+          cp -R _site/. ../site-final/
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git switch --orphan hostinger-deploy
+          git rm -rf . || true
+          cp -R ../site-final/. .
+          touch .nojekyll
+
+          git add .
+          git commit -m "Atualizar site gerado"
+          git push --force origin hostinger-deploy
